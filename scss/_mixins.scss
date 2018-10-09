@@ -1,0 +1,46 @@
+@mixin display_flex(){
+	display: -webkit-box;	/* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;		/* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;	/* TWEENER - IE 10 */
+	display: -webkit-flex;	/* NEW - Chrome */
+	display: flex;				/* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+@mixin flex_direction($direction){
+		 -webkit-box-orient: $direction;
+	  	    -moz-box-orient: $direction;
+			  -ms-box-orient: $direction;
+	-webkit-flex-direction: $direction;
+	   -moz-flex-direction: $direction;
+			  flex-direction: $direction;
+}
+
+@mixin flex_flow($direction, $wraping){
+	-webkit-flex-flow: $direction $wraping;
+		 -ms-flex-flow: $direction $wraping;
+			  flex-flow: $direction $wraping;
+}
+
+@mixin flex($grow, $basis){
+	-webkit-flex: $grow $basis;
+		 -ms-flex: $grow $basis;
+			  flex: $grow $basis;
+}
+
+@mixin align_self($direction){
+	-webkit-align-self: $direction;
+		 -ms-align-self: $direction;
+			  align-self: $direction;
+}
+
+@mixin shadow($w, $x, $y, $z, $color){
+	-webkit-box-shadow: $w $x $y $z $color;
+      -moz-box-shadow: $w $x $y $z $color;
+  			  box-shadow: $w $x $y $z $color;
+}
+
+@mixin border_radius($x){
+	-webkit-border-radius: $x;
+		-moz-border-radius: $x;
+		     border-radius: $x;
+}

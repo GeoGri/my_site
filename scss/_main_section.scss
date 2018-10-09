@@ -1,0 +1,99 @@
+
+/*---left site---*/
+.photo{
+	text-align: center;
+	-moz-text-align: center;
+
+	position: relative;
+
+	button{
+		position: absolute;
+		z-index: +1;
+
+		-moz-border: 0;
+		-webkit-border: 0;
+		border: 0;
+
+		background-color: $blue_color;
+
+		i{color: white;}
+	}
+
+	.subtitle{
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 36px;
+		color: $blue_color;
+
+		padding: 0;
+	}
+
+	h3{
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: 14px;
+
+		padding: 0;
+	}
+}
+
+.photo, .about_me{margin: 10px;}
+
+/*---right site---*/
+.about_me{
+	@include display_flex();
+	@include flex_direction(column);
+
+	.subtitle{
+		@include display_flex();
+
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 41px;
+
+		h3{
+			@include align_self(flex-end);
+			position: relative;
+
+			margin-bottom: 0;
+			padding: 0;
+
+			&:after{
+				content: "";
+
+				width: 100px;
+				height: 4px;
+
+				position: absolute;
+				top: 55px;
+				left: 0;
+
+				background-color: $blue_color;
+				@include border_radius(30px);
+			}
+		}
+	}
+
+	p{line-height: 27px;}
+	.details div{padding: 0;}
+
+	span{
+		font-weight: 900;
+		color: $subtitle_color;
+
+		padding-left: 0;
+		width: 100px;
+		display: inline-block;
+	}
+}
+
+/*SOCIAL MEDIA*/
+.social_media{
+	background-color: $blue_color;
+	text-align: center;
+	color: white;
+
+	a{color: white;}
+	i{padding: 20px 50px;}
+}
